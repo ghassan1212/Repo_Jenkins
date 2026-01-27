@@ -1,0 +1,6 @@
+Selected value by index: Chhattisgarh
+Selected value by Label: Goa
+Selected value by value: Delhi
+Selected value is: Delhi
+Selected value are: Select StateAndhra PradeshArunachal PradeshAssamBiharChhattisgarhGoaGujaratHaryanaHimachal PradeshJammu and KashmirJharkhandKarnatakaKeralaMadhya PradeshMaharashtraManipurMeghalayaMizoramNagalandOdishaPunjabRajasthanSikkimTamil NaduTelanganaTripuraUttarakhandUttar PradeshWest BengalAndaman and Nicobar IslandsChandigarhDadra and Nagar HaveliDaman and DiuDelhiLakshadweepPuducherry
+Selected value are: locator('#state').getByRole('listitem')

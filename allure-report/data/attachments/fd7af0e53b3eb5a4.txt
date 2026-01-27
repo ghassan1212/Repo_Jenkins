@@ -1,0 +1,6 @@
+Selected value: ISL
+ISL option is selected successfully.
+Selected value: GRC
+GRC option is selected successfully.
+Selected value: MAC
+MAC option is not selected.
