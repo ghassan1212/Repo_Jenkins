@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build an Application'
-                git ''
+                git 'https://github.com/ghassan1212/Repo_Jenkins.git'
             }
         }
          stage('Test') {
