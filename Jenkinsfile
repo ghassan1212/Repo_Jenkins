@@ -20,6 +20,10 @@ pipeline {
                 echo No Go files found, skipping tests
                 )
                 '''
+    stage('Building ourimage') {
+          steps {
+                script {
+                       app= docor.build("adminturneddevops.go-webapp-sample")
             }
         }
     }
