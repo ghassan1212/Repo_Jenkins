@@ -13,7 +13,7 @@ pipeline {
 
         stage('Development') {
             steps {
-                git branch: 'main', url: 'https://github.com/ghassan1212/Repo_Jenkins.git'
+                git 'https://github.com/ghassan1212/Repo_Jenkins.git'
 
                 bat '''
                 if exist *.go (
