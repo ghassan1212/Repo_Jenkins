@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        GO111MODULE = 'on'
+        GO111MODULE = 'off'
     }
 
     stages {
