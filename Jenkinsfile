@@ -10,20 +10,26 @@ pipeline {
     }
 
     stages {
+
         stage('Development') {
             steps {
                 git branch: 'main', url: 'https://github.com/ghassan1212/Repo_Jenkins.git'
+
                 bat '''
                 if exist *.go (
-                go test ./... -v
+                    go test ./... -v
                 ) else (
-                echo No Go files found, skipping tests
+                    echo No Go files found, skipping tests
                 )
                 '''
-    stage('Building ourimage') {
-          steps {
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
                 script {
-                       app= docor.build("adminturneddevops.go-webapp-sample")
+                    def app = docker.build("adminturneddevops.go-webapp-sample")
+                }
             }
         }
     }
