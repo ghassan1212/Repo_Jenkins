@@ -10,7 +10,7 @@ pipeline {
     }
 
     stages {
-        stage('Development and Building') {
+        stage('Development') {
             steps {
                 git branch: 'main', url: 'https://github.com/ghassan1212/Repo_Jenkins.git'
                 bat '''
