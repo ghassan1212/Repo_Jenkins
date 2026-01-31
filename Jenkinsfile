@@ -11,19 +11,17 @@ pipeline {
 
     stages {
 
-        stage('Development') {
-            steps {
-                git 'https://github.com/ghassan1212/Repo_Jenkins.git'
-
-                bat '''
-                if exist *.go (
-                    go test ./... -v
-                ) else (
-                    echo No Go files found, skipping tests
-                )
-                '''
-            }
-        }
+       stage('Development') {
+    steps {
+        bat '''
+        if exist *.go (
+            go test ./... -v
+        ) else (
+            echo No Go files found, skipping tests
+        )
+        '''
+    }
+}
 
         stage('Build Docker Image') {
             steps {
