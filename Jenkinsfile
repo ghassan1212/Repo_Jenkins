@@ -11,17 +11,24 @@ pipeline {
 
     stages {
 
-       stage('Development') {
-    steps {
-        bat '''
-        if exist *.go (
-            go test ./... -v
-        ) else (
-            echo No Go files found, skipping tests
-        )
-        '''
-    }
-}
+        stage('Development') {
+            steps {
+                // Git is already checked out by Jenkins
+                bat '''
+                if exist *.go (
+                    go test ./... -v
+                ) else (
+                    echo No Go files found, skipping tests
+                )
+                '''
+            }
+        }
+
+        stage('Docker Info') {   // <-- Add it here, before building the image
+            steps {
+                bat 'docker info'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
